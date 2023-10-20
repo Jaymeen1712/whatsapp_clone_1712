@@ -1,0 +1,22 @@
+.signup-container {
+  min-width: 400px;
+  background-color: #222e35 !important;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden; /* Clip content within rounded corners */
+  background-clip: padding-box; /* Ensure background covers padding */
+
+  form {
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+
+    .ant-input {
+      width: 100%;
+    }
+
+    .ant-btn {
+      width: 100%;
+    }
+  }
+}

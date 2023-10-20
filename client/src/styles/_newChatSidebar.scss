@@ -1,0 +1,16 @@
+.new-chat-sidebar-container {
+  height: 100%;
+}
+
+.new-chat-sidebar-header-container {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #202c33;
+  height: 100px;
+}
+
+.new-chat-sidebar-body {
+  flex: 1;
+  // overflow: auto;
+  // background-color: black;
+}

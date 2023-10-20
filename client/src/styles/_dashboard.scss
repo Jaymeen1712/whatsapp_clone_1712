@@ -1,0 +1,31 @@
+.outer-container {
+  min-height: 100vh;
+  background-color: #0c1317 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer-layer {
+  display: flex;
+  align-items: center;
+  background-color: #0c1317 !important;
+}
+
+.dashboard-layer {
+  width: 97%;
+  height: 95vh;
+  background-color: #222e35;
+}
+
+.sider {
+  border-right: 1px solid #313d45;
+  height: 100%;
+  // width: 100%;
+}
+
+.content-container {
+  height: 100%;
+  width: 100%;
+  // background-color: black;
+}
