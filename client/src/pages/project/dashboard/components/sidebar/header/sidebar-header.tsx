@@ -14,9 +14,9 @@ const SidebarHeader = () => {
         icon={<UserOutlined />}
         className="m-l-24"
       />
-      <Button onClick={() => setIncomingChatFlag(!incomingChatFlag)}>
+      {/* <Button onClick={() => setIncomingChatFlag(!incomingChatFlag)}>
         Chats
-      </Button>
+      </Button> */}
       <Button
         className="m-r-24"
         onClick={() => setNewChatSidebar(true)}

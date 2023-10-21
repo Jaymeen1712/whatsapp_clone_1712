@@ -13,7 +13,10 @@ const MessageBody = () => {
           {selectedChatMessages.map((message) => {
             if (message.senderId === currentUserData.uuid) {
               return (
-                <div className="message-chat-container right-chat-container">
+                <div
+                  className="message-chat-container right-chat-container"
+                  key={message.uuid}
+                >
                   <MessageChat
                     message={message}
                     className="message-chat-right"
@@ -22,7 +25,10 @@ const MessageBody = () => {
               );
             } else {
               return (
-                <div className="message-chat-container left-chat-container">
+                <div
+                  className="message-chat-container left-chat-container"
+                  key={message.uuid}
+                >
                   <MessageChat
                     message={message}
                     className="message-chat-left"
