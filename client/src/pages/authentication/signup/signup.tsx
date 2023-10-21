@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Input, Button } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 
-import { handleCreateUser } from "../../../api";
+import { handleSignupAPI } from "../../../api";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Signup = () => {
     username: string;
     password: string;
   }) => {
-    await handleCreateUser(values);
+    await handleSignupAPI(values);
     navigate("/login");
   };
 
