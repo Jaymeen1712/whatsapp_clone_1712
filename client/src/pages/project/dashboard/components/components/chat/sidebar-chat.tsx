@@ -1,14 +1,14 @@
 import { UserOutlined } from "@ant-design/icons";
 import { Avatar, Typography } from "antd";
 import React from "react";
-import { User } from "../../../../../../types/user.";
+import { ChatHistory } from "../../../../../../types/user.";
 
 interface Props {
-  user?: User;
+  chatInfo?: ChatHistory;
   isNewChat?: boolean;
 }
 
-const SidebarChat: React.FC<Props> = ({ user, isNewChat = true }) => {
+const SidebarChat: React.FC<Props> = ({ chatInfo, isNewChat = true }) => {
   return (
     <div className="sidebar-chat-container flex justify-center">
       <div
@@ -25,10 +25,10 @@ const SidebarChat: React.FC<Props> = ({ user, isNewChat = true }) => {
           />
           <div className="flex m-l-16" style={{ flexDirection: "column" }}>
             <Typography.Text style={{ color: "white" }}>
-              {user?.firstName} {user?.lastName}
+              {chatInfo?.firstName} {chatInfo?.lastName}
             </Typography.Text>
             <Typography.Text style={{ color: "white" }}>
-              Message description
+              {chatInfo?.message}
             </Typography.Text>
           </div>
         </div>

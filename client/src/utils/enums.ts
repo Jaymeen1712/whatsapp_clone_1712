@@ -14,6 +14,7 @@ const STATISTICS_API = {
   CREATE_MESSAGE: `${API_ENDPOINT}/createMessage`,
   GET_SINGLE_USER: `${API_ENDPOINT}/singleUser`,
   GET_MATCHED_MESSAGES: `${API_ENDPOINT}/matchedMessages`,
+  GET_CHAT_HISTORY: `${API_ENDPOINT}/getChatHistory`,
 };
 
 export const API_ROUTES = {

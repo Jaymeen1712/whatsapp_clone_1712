@@ -18,3 +18,7 @@ export interface Message {
   updatedAt: string;
   uuid: string;
 }
+
+export interface ChatHistory extends User {
+  message?: string;
+}

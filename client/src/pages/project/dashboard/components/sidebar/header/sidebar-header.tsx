@@ -5,7 +5,8 @@ import { useAppStore } from "../../../../../../store";
 import AddChatIcon from "../../../../../../images/icons/add-chat-icon";
 
 const SidebarHeader = () => {
-  const { setNewChatSidebar } = useAppStore();
+  const { setNewChatSidebar, setIncomingChatFlag, incomingChatFlag } =
+    useAppStore();
   return (
     <div className="sidebar-header-container flex justify-between items-center">
       <Avatar
@@ -13,11 +14,14 @@ const SidebarHeader = () => {
         icon={<UserOutlined />}
         className="m-l-24"
       />
+      <Button onClick={() => setIncomingChatFlag(!incomingChatFlag)}>
+        Chats
+      </Button>
       <Button
         className="m-r-24"
         onClick={() => setNewChatSidebar(true)}
         icon={<AddChatIcon />}
-      ></Button>
+      />
     </div>
   );
 };

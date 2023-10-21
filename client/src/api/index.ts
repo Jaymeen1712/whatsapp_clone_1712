@@ -4,6 +4,7 @@ import handleCreateMessage from "./project/message/create-message";
 import handleLoginAPI from "./authentication/login";
 import handleGetSingleUser from "./project/user/get-single-user";
 import handleGetMatchedMessages from "./project/message/get-matched-message";
+import handleGetChatHistoryAPI from "./project/sidebar/get-chat-history";
 
 export {
   handleSignupAPI,
@@ -11,5 +12,6 @@ export {
   handleCreateMessage,
   handleLoginAPI,
   handleGetSingleUser,
-  handleGetMatchedMessages
+  handleGetMatchedMessages,
+  handleGetChatHistoryAPI
 };

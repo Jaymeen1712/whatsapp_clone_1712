@@ -47,7 +47,7 @@ const NewChatSidebar = () => {
         <div className="sidebar-chats-container">
           {allUsers?.map((user) => (
             <div onClick={() => handleChatClick(user)} key={user.uuid}>
-              <SidebarChat user={user} />
+              <SidebarChat chatInfo={user} />
             </div>
           ))}
         </div>
