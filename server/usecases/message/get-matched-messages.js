@@ -1,4 +1,4 @@
-module.exports = function makeGetMatchedMessages({ createMessagedb }) {
+module.exports = function makeGetMatchedMessages({ getMatchedMessagesdb }) {
   return async function createUser({ params }) {
     const { senderId, receiverId } = params;
 

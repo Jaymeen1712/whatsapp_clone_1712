@@ -11,5 +11,6 @@ router.get(
   "/matchedMessages/:senderId/:receiverId",
   controller.getMatchedMessagesActionController
 );
+router.get("/getChatHistory/:userId", controller.getChatHistoryActionController);
 
 module.exports = { router };

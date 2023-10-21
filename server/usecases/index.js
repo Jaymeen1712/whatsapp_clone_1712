@@ -36,8 +36,13 @@ const getSingleUser = makeGetSingleUser({
 
 const makeGetMatchedMessages = require("./message/get-matched-messages");
 const getMatchedMessages = makeGetMatchedMessages({
-  createMessagedb: messageTable.getMatchedMessages,
+  getMatchedMessagesdb: messageTable.getMatchedMessages,
 });
+
+const makeGetChatHistory = require("./message/get-chat-history")
+const getChatHistory = makeGetChatHistory({
+  getChatHistorydb: messageTable.getChatHistory
+})
 
 module.exports = Object.freeze({
   createUser,
@@ -45,5 +50,6 @@ module.exports = Object.freeze({
   createMessage,
   login,
   getSingleUser,
-  getMatchedMessages
+  getMatchedMessages,
+  getChatHistory
 });

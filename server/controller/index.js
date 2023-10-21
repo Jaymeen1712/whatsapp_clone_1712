@@ -31,11 +31,17 @@ const getMatchedMessagesActionController =
     getMatchedMessages: useCases.getMatchedMessages,
   });
 
+const makeGetChatHistoryActionController = require("./message/get-chat-history-controller");
+const getChatHistoryActionController = makeGetChatHistoryActionController({
+  getChatHistory: useCases.getChatHistory,
+});
+
 module.exports = Object.freeze({
   createUserActionController,
   getAllUsersActionController,
   createMessageActionController,
   loginActionController,
   getSingleUserActionController,
-  getMatchedMessagesActionController
+  getMatchedMessagesActionController,
+  getChatHistoryActionController
 });

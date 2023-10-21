@@ -2,6 +2,7 @@ module.exports = function makeMessageTable({ connection }) {
   return Object.freeze({
     createMessage,
     getMatchedMessages,
+    getChatHistory
   });
 
   async function createMessage({ insertObj }) {
@@ -24,6 +25,12 @@ module.exports = function makeMessageTable({ connection }) {
       senderId,
     ]);
 
-    return response
+    return response;
+  }
+
+  async function getChatHistory({ userId }) {
+    const sql = `SELECT * FROM message WHERE (senderId = ?) OR (receiverId = ?)`;
+    const response = await connection.query(sql, [userId, userId]);
+    return response;
   }
 };
