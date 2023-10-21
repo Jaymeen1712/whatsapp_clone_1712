@@ -1,5 +1,5 @@
-import axios from "axios";
-import { API_ROUTES, URL } from "../../../utils";
+import { API_ROUTES } from "../../../utils";
+import apiClient from "../../api-client";
 
 const handleCreateUser = async (data: {
   firstName: string;
@@ -7,10 +7,7 @@ const handleCreateUser = async (data: {
   username: string;
   password: string;
 }) => {
-  const response = await axios.post(
-    `${URL}/${API_ROUTES.SIGNUP}`,
-    data
-  );
+  const response = await apiClient.post(API_ROUTES.SIGNUP, data);
   return response;
 };
 

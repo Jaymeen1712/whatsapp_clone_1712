@@ -2,7 +2,7 @@ const API_ENDPOINT_V1 = "clone/api/v1";
 
 const API_ENDPOINT = API_ENDPOINT_V1;
 
-export const URL = "http://localhost:4042"
+export const URL = "https://flow-chat-backend.onrender.com"
 
 const USERS_API = {
   SIGNUP: "/signup",

@@ -1,7 +1,8 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-import { API_ROUTES, URL } from "../../utils";
+import { API_ROUTES } from "../../utils";
+import apiClient from "../api-client";
 
 const handleLoginAPI = async ({
   username,
@@ -13,7 +14,7 @@ const handleLoginAPI = async ({
   let errors = null;
   let response = null;
   try {
-    response = await axios.post(`${URL}/${API_ROUTES.LOGIN}`, {
+    response = await apiClient.post(API_ROUTES.LOGIN, {
       username,
       password,
     });

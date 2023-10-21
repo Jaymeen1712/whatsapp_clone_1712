@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import dashboard from "../pages/project/dashboard";
-import { Navigate, Outlet, Route, Routes, useNavigate } from "react-router-dom";
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom";
 import { Layout } from "antd";
 import Cookies from "js-cookie";
 
@@ -50,6 +50,7 @@ const RoutesWrapper = () => {
       <Layout className="outer-layer">
         <Routes>
           <Route path="/" element={<Navigate to={"/dashboard"} />} />
+          <Route path="/*" element={<PageNotFound />} />
           {guardRoutes.map(({ component, path }) => (
             <Route
               element={<GuardRoute Component={component} />}
@@ -64,7 +65,6 @@ const RoutesWrapper = () => {
               key={path}
             />
           ))}
-          <Route path="/*" element={<PageNotFound />} />
         </Routes>
       </Layout>
     </div>
