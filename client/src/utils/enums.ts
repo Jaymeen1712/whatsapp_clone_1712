@@ -2,7 +2,7 @@ const API_ENDPOINT_V1 = "clone/api/v1";
 
 const API_ENDPOINT = API_ENDPOINT_V1;
 
-export const URL = "https://flow-chat-backend.onrender.com"
+export const URL = "https://flow-chat-backend.vercel.app";
 
 const USERS_API = {
   SIGNUP: `${API_ENDPOINT}/signup`,
