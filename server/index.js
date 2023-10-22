@@ -11,13 +11,6 @@ const Cors = require("cors");
 const restService = require("./rest-service");
 
 const server = http.createServer(app);
-app.use(
-  Cors({
-    origin: config.originURL,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true, // if your requests include cookies
-  })
-);
 app.use(express.json());
 app.use(SERVICE_ENDPOINT, restService.router);
 
