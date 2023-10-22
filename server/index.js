@@ -17,7 +17,7 @@ app.use(SERVICE_ENDPOINT, restService.router);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://flow-chats.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
   },
 });
